@@ -18,7 +18,7 @@ public class DataStorage {
 	
 	public static final String DB_NAME = "flights";
 	public static final String TABLE_NAME = "flight";
-	public static String path = "C:/Users/L404008/git/bigdata/resource/result.json";
+
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -37,9 +37,7 @@ public class DataStorage {
 		}
 
 		System.out.println("Done");
-		
-	
-		
+			
 	}
 	
 	/**
@@ -70,5 +68,9 @@ public class DataStorage {
 	}
 	
 	
-
+	
+	
+	
+	
+	public static String path = "C:/Users/L404008/git/bigdata/resource/result.json";
 }
