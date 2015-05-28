@@ -20,14 +20,14 @@ public class FlightDelaysData {
 	static String enigma_api = "6336800936fe4cd1fd565f4865f4e792";
 	static String url = "https://api.enigma.io/v2/data/" + enigma_api;
 	static String url2 = url
-			+ "/us.gov.dot.rita.trans-stats.on-time-performance.2009?page=";
+			+ "/us.gov.dot.rita.trans-stats.on-time-performance.2012?page=";
 
 	static String[] flightAttributes = { "flightdate", "flightnum",
 			"airlineid", "carrier", "originairportid", "origincityname",
 			"originstatename", "destairportid", "destcityname", "deststate",
 			"deptime", "arrtime", "lateaircraftdelay", "arrdelay",
 			"divarrdelay", "depdelay", "weatherdelay", "securitydelay",
-			"depdelayminutes", "nasdelay", "carrierdelay" };
+			"depdelayminutes", "nasdelay", "carrierdelay","origin","dest","dayofweek","dayofmonth","month","year","distance"};
 	static JSONArray resultJsonArray = new JSONArray();
 	static String path = "C:/Users/L404008/git/bigdata/resource/result.json";
 	
@@ -36,7 +36,7 @@ public class FlightDelaysData {
 	public static void main(String[] args) throws Exception {
 
 		
-		for(int i=1; i < 20; i++){
+		for(int i=1; i < 21; i++){
 		URL url = new URL(url2+i);
 		URLConnection urlConnection = url.openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(

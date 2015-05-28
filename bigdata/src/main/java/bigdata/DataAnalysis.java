@@ -27,30 +27,30 @@ public class DataAnalysis {
 		System.out.println("Weather Mean = "
 				+ calculateMean(jsonArray, WEATHER_DELAY));
 
-		System.out.println("Arr Delay = "
-				+ calculateMean(jsonArray, "arrdelay"));
-
-		System.out.println("Late Aircract Delay = "
-				+ calculateMean(jsonArray, "lateaircraftdelay"));
-
-		System.out.println("Divarrdelay Delay = "
-				+ calculateMean(jsonArray, "divarrdelay"));
-
-		System.out.println("Depdelay Delay = "
-				+ calculateMean(jsonArray, "depdelay"));
-
-		System.out.println("securitydelay Delay = "
-				+ calculateMean(jsonArray, "securitydelay"));
-
-		System.out.println("NASdelay Delay = "
-				+ calculateMean(jsonArray, "nasdelay"));
-
-		System.out.println("carrierdelay Delay = "
-				+ calculateMean(jsonArray, "carrierdelay"));
+//		System.out.println("Arr Delay = "
+//				+ calculateMean(jsonArray, "arrdelay"));
+//
+//		System.out.println("Late Aircract Delay = "
+//				+ calculateMean(jsonArray, "lateaircraftdelay"));
+//
+//		System.out.println("Divarrdelay Delay = "
+//				+ calculateMean(jsonArray, "divarrdelay"));
+//
+//		System.out.println("Depdelay Delay = "
+//				+ calculateMean(jsonArray, "depdelay"));
+//
+//		System.out.println("securitydelay Delay = "
+//				+ calculateMean(jsonArray, "securitydelay"));
+//
+//		System.out.println("NASdelay Delay = "
+//				+ calculateMean(jsonArray, "nasdelay"));
+//
+//		System.out.println("carrierdelay Delay = "
+//				+ calculateMean(jsonArray, "carrierdelay"));
 
 		// Standard Devitaion
 
-		System.out
+	/*	System.out
 				.println(" ********************************************************************************************************  ");
 
 		Statistics statistics = new Statistics(getFlightData(jsonArray,
@@ -151,12 +151,18 @@ public class DataAnalysis {
 				+ getMode(jsonArray, "carrierdelay"));
 		
 		
-		
+		*/
 		
 
 
 	}
 
+	/**
+	 * 
+	 * @param jsonArray
+	 * @param dealyAttribute
+	 * @return
+	 */
 	public static double[] getFlightData(JSONArray jsonArray,
 			String dealyAttribute) {
 
@@ -190,6 +196,12 @@ public class DataAnalysis {
 		return values;
 	}
 
+	/**
+	 * 
+	 * @param jsonArray
+	 * @param dealyAttribute
+	 * @return
+	 */
 	public static double calculateMean(JSONArray jsonArray,
 			String dealyAttribute) {
 
@@ -212,14 +224,23 @@ public class DataAnalysis {
 			}
 
 		}
+		
+		System.out.println(" Total Count = " + totalSize);
 
 		if (jsonArray.size() > 0 && meanValue > 0) {
 			return meanValue / totalSize;
 		}
 
+	
 		return 0;
 	}
 
+	/**
+	 * 
+	 * @param jsonArray
+	 * @param dealyAttribute
+	 * @return
+	 */
 	public static double getMedian(JSONArray jsonArray, String dealyAttribute) {
 
 		ArrayList<Double> list = new ArrayList<Double>();
@@ -251,7 +272,12 @@ public class DataAnalysis {
 	}
 	
 	
-	
+	/**
+	 * 
+	 * @param jsonArray
+	 * @param dealyAttribute
+	 * @return
+	 */
 	
 	public static double getMode(JSONArray jsonArray, String dealyAttribute) {
 
@@ -295,8 +321,6 @@ public class DataAnalysis {
 	   
 	   
 	   for (Map.Entry<Double, Integer> entry : valueCount.entrySet()) {
-//		    String key = entry.getKey();
-//		    Object value = entry.getValue();
 		   
 		  Double key =  entry.getKey();
 		   
