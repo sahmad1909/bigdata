@@ -27,31 +27,31 @@ public class DataAnalysis {
 		System.out.println("Weather Mean = "
 				+ calculateMean(jsonArray, WEATHER_DELAY));
 
-//		System.out.println("Arr Delay = "
-//				+ calculateMean(jsonArray, "arrdelay"));
-//
-//		System.out.println("Late Aircract Delay = "
-//				+ calculateMean(jsonArray, "lateaircraftdelay"));
-//
-//		System.out.println("Divarrdelay Delay = "
-//				+ calculateMean(jsonArray, "divarrdelay"));
-//
-//		System.out.println("Depdelay Delay = "
-//				+ calculateMean(jsonArray, "depdelay"));
-//
-//		System.out.println("securitydelay Delay = "
-//				+ calculateMean(jsonArray, "securitydelay"));
-//
-//		System.out.println("NASdelay Delay = "
-//				+ calculateMean(jsonArray, "nasdelay"));
-//
-//		System.out.println("carrierdelay Delay = "
-//				+ calculateMean(jsonArray, "carrierdelay"));
+		System.out.println("Arr Delay = "
+				+ calculateMean(jsonArray, "arrdelay"));
+
+		System.out.println("Late Aircract Delay = "
+				+ calculateMean(jsonArray, "lateaircraftdelay"));
+
+		System.out.println("Divarrdelay Delay = "
+				+ calculateMean(jsonArray, "divarrdelay"));
+
+		System.out.println("Depdelay Delay = "
+				+ calculateMean(jsonArray, "depdelay"));
+
+		System.out.println("securitydelay Delay = "
+				+ calculateMean(jsonArray, "securitydelay"));
+
+		System.out.println("NASdelay Delay = "
+				+ calculateMean(jsonArray, "nasdelay"));
+
+		System.out.println("carrierdelay Delay = "
+				+ calculateMean(jsonArray, "carrierdelay"));
 
 		// Standard Devitaion
-
-	/*	System.out
-				.println(" ********************************************************************************************************  ");
+/*
+	System.out
+				.println(" *********************************************Standard Deviation ********************************************************  ");
 
 		Statistics statistics = new Statistics(getFlightData(jsonArray,
 				WEATHER_DELAY));
@@ -90,12 +90,12 @@ public class DataAnalysis {
 		
 
 		System.out
-				.println(" ********************************************************************************************************  ");
+				.println(" ********************************************** Median *********************************************  ");
 		
 
 
 		
-		System.out.println("Weather Median = "
+		System.out.println("Weather = "
 				+ getMedian(jsonArray, WEATHER_DELAY));
 
 		System.out.println("Arr Delay = "
@@ -123,10 +123,10 @@ public class DataAnalysis {
 		
 		
 		System.out
-		.println(" ********************************************************************************************************  ");
+		.println(" ************************************** Mode ***************************************************************  ");
 		
 		
-		System.out.println("Weather Median = "
+		System.out.println("Weather = "
 				+ getMode(jsonArray, WEATHER_DELAY));
 
 		System.out.println("Arr Delay = "
@@ -150,8 +150,8 @@ public class DataAnalysis {
 		System.out.println("carrierdelay Delay = "
 				+ getMode(jsonArray, "carrierdelay"));
 		
-		
 		*/
+	
 		
 
 
@@ -225,7 +225,7 @@ public class DataAnalysis {
 
 		}
 		
-		System.out.println(" Total Count = " + totalSize);
+		System.out.println(" Total Count = " + dealyAttribute  + "     :   "  + totalSize);
 
 		if (jsonArray.size() > 0 && meanValue > 0) {
 			return meanValue / totalSize;
