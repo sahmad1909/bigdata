@@ -49,7 +49,7 @@ public class DataAnalysis {
 				+ calculateMean(jsonArray, "carrierdelay"));
 
 		// Standard Devitaion
-/*
+
 	System.out
 				.println(" *********************************************Standard Deviation ********************************************************  ");
 
@@ -150,7 +150,7 @@ public class DataAnalysis {
 		System.out.println("carrierdelay Delay = "
 				+ getMode(jsonArray, "carrierdelay"));
 		
-		*/
+		
 	
 		
 

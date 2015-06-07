@@ -33,8 +33,8 @@ public class DepartureDelayedFlights {
 	public static void main(String[] args) throws Exception {
 
 		JSONArray jsonArray = readJsonFileitoArray(RESULT_JSON);
-//		FileWriter fileWriter = new FileWriter(
-//				"C:/Users/L404008/git/bigdata/resource/departure_data.csv");
+		FileWriter fileWriter = new FileWriter(
+				"C:/Users/L404008/git/bigdata/resource/departure_data.csv");
 
 		for (Object object : jsonArray) {
 			JSONObject jsonObject = (JSONObject) object;
@@ -44,21 +44,21 @@ public class DepartureDelayedFlights {
 			jsonObject.get("carrier");
 			jsonObject.get("depdelay");
 
-//			fileWriter.append((String) jsonObject.get("flightdate"));
-//			fileWriter.append(COMMA_DELIMITER);
+			fileWriter.append((String) jsonObject.get("flightdate"));
+			fileWriter.append(COMMA_DELIMITER);
 
-			String originAirport = (String) jsonObject.get("origin");
+			String originAirport = (String) jsonObject.get("oridsgin");
 
-//			fileWriter.append(originAirport);
-//			fileWriter.append(COMMA_DELIMITER);
+			fileWriter.append(originAirport);
+			fileWriter.append(COMMA_DELIMITER);
 
 			String carrier = (String) jsonObject.get("carrier");
-//			fileWriter.append(carrier);
-//			fileWriter.append(COMMA_DELIMITER);
+			fileWriter.append(carrier);
+			fileWriter.append(COMMA_DELIMITER);
 
 			String delayed = isWeatherExist(jsonObject);
-//			fileWriter.append(delayed);
-//			fileWriter.append(NEW_LINE_SEPARATOR);
+			fileWriter.append(delayed);
+			fileWriter.append(NEW_LINE_SEPARATOR);
 
 			if (delayed.endsWith("YES")) {
 

@@ -36,7 +36,7 @@ public class FlightDelaysData {
 	public static void main(String[] args) throws Exception {
 
 		
-		for(int i=1; i < 21; i++){
+		for(int i=1; i < 3; i++){
 		URL url = new URL(url2+i);
 		URLConnection urlConnection = url.openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(
